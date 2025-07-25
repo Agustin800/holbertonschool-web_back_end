@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-'''funcion que retorna la suma de todos los números en la lista que contiene ints y floats.'''
+'''funcion que retorna la suma de todos los números'''
+'''en la lista que contiene ints y floats.'''
 
 
 from typing import List, Union
