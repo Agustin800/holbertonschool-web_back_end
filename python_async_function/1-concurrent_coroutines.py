@@ -9,6 +9,7 @@ from typing import List
 import importlib
 wait_random = importlib.import_module('0-basic_async_syntax').wait_random
 
+
 async def wait_n(n: int, max_delay: int) -> List[float]:
     '''retorna la lista con todas las esperas dentro'''
     delays = []
