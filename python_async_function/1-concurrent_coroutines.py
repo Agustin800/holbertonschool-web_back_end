@@ -12,10 +12,10 @@ wait_random = importlib.import_module('0-basic_async_syntax').wait_random
 async def wait_n(n: int, max_delay: int) -> List[float]:
     '''retorna la lista con todas las esperas dentro'''
     delays = []
-    tasks = [wait_random(max_delay) for a in range(n)]
+    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
 
-    for task in asyncio.as_completed(task):
-        delay = await task
+    for a in asyncio.as_completed(tasks):
+        delay = await a
         delays.append(delay)
     
     return delays
