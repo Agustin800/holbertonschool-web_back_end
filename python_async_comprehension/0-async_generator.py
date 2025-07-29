@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-'''funcion que genera 10 números aleatorios entre 0 y 10 con una pausa de 1 segundo.'''
+'''funcion que genera 10 números aleatorios entre 0 y 10
+con una pausa de 1 segundo.'''
 
 
 import random
