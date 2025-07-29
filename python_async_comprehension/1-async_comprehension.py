@@ -11,4 +11,4 @@ async_generator = importlib.import_module('0-async_generator').async_generator
 
 async def async_comprehension() -> List[float]:
     '''recopila 10 números aleatorios desde async_generator.'''
-    return [n async for n in async_generator]
+    return [n async for n in async_generator()]
