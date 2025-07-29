@@ -14,5 +14,5 @@ async def measure_runtime() -> float:
     start = time.perf_counter()
     await asyncio.gather(*(async_comprehension() for _ in range(4)))
     end = time.perf_counter()
-    total = start - end
+    total = end - start
     return total
