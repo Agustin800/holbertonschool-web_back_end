@@ -26,7 +26,8 @@ class Server:
         return self.__dataset
 
     def indexed_dataset(self) -> Dict[int, List]:
-        """Devuelve el dataset indexado por posición, empezando en 0."""
+        '''Devuelve el dataset indexado por posición,
+        empezando en 0.'''
         if self.__indexed_dataset is None:
             dataset = self.dataset()
             truncated_dataset = dataset[:1000]
