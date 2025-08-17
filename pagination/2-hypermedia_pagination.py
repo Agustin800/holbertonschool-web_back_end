@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-'''Funcion que retorna una pagina del dataset'''
+'''Clase Server con paginación e hipermedia'''
 
 import csv
 import math
@@ -40,7 +40,7 @@ class Server:
             return dataset[start:end]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
-        '''Retorna una página del dataset'''
+        '''Retorna un diccionario con datos de paginación'''
         data = self.get_page(page, page_size)
         all_items = len(self.dataset())
         total_pages = math.ceil(all_items / page_size)
@@ -50,6 +50,6 @@ class Server:
             'page': page,
             'data': data,
             'next_page': page + 1 if page < total_pages else None,
-            'pre_page': page - 1 if page > 1 else None,
+            'prev_page': page - 1 if page > 1 else None,
             'total_pages': total_pages
         }
