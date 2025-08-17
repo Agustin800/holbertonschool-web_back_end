@@ -1,0 +1,4 @@
+#!/bin/bash
+'''Script que lista todas las bases de datos en MongoDB'''
+
+mongo --quiet --eval "db.adminCommand('listDatabases')"
